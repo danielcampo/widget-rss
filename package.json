@@ -1,0 +1,37 @@
+{
+  "name": "widget-rss",
+  "version": "1.0.0",
+  "description": "Javascript ES6 module to read and parse RSS to display content with html",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "./node_modules/babel/bin/babel.js src --watch --out-file public/widget-rss.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lpirola/widget-rss.git"
+  },
+  "keywords": [
+    "rss",
+    "html",
+    "widget",
+    "parser"
+  ],
+  "author": "Lucas Pirola <lpirola@protonmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lpirola/widget-rss/issues"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "homepage": "https://github.com/lpirola/widget-rss#readme",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "cors": "^2.7.1",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "request": "^2.64.0"
+  }
+}

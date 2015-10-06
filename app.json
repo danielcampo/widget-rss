@@ -1,0 +1,8 @@
+{
+  "name": "Widget Rss",
+  "description": "Javascript ES6 module to read and parse RSS to display content with html",
+  "repository": "https://github.com/lpirola/widget-rss",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["rss", "json", "es6", "babel", "widget", "html"],
+  "image": "heroku/nodejs"
+}
