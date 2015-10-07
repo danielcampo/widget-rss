@@ -44,7 +44,7 @@ class WidgetRss {
 // 	</div>
 // </div>
 		}
-		box.insertAdjacentHTML("beforeend", html.join("\n"))
+		box.insertAdjacentHTML("afterend", html.join("\n"))
 	}
 }
 //var wr = new WidgetRss(document.body, 'http://www.jornalismoemfluxo.com/tudo?format=json&callback=wr.parse')
