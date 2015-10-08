@@ -17,21 +17,22 @@ class WidgetRss {
 	display (box) {
 		let html = []
 		for (let article of this.data.items) {
+			console.log(assetUrl);
 			let {assetUrl, categories, fullUrl, id, excerpt, title, tags} = article
 			let link = 'http://jornalismoemfluxo.net' + fullUrl
 			html.push(`
-<div class="summary-item summary-item-record-type-text sqs-gallery-design-autogrid-slide summary-item-has-thumbnail summary-item-has-excerpt summary-item-has-author">
+<div class="article">
 <!-- Thumbnail -->
-<a href="${link}" class="summary-thumbnail-container sqs-gallery-image-container" data-title="${title}">
-	<div class="summary-thumbnail img-wrapper">
+<a href="${link}" class="thumbnail">
+	<div class="img-wrapper">
 	<!-- Main Image -->
-		<img class="summary-thumbnail-image" alt="${title}" src="${assetUrl}" height=200 style="max-width:100%">
+		<img class="thumbnail-image" alt="${title}" src="${assetUrl}" height=200 style="max-width:100%">
 	</div>
 </a>
-<div class="summary-title">
-	<a href="${link}" class="summary-title-link">${title}</a>
+<div class="title">
+	<a href="${link}" class="title-link">${title}</a>
 </div>
-<div class="summary-excerpt">
+<div class="excerpt">
 	${excerpt}
 </div>
 </div>`)
@@ -44,7 +45,9 @@ class WidgetRss {
 // 	</div>
 // </div>
 		}
-		box.insertAdjacentHTML("afterend", html.join("\n"))
+		box.insertAdjacentHTML("beforeend", html.join("\n"))
 	}
 }
-//var wr = new WidgetRss(document.body, 'http://www.jornalismoemfluxo.com/tudo?format=json&callback=wr.parse')
+//var wr = new WidgetRss(document.getElementById('page'), 'http://www.jornalismoemfluxo.com/tudo?format=json&callback=wr.parse')
+var wr = new WidgetRss(document.getElementById('block-yui_3_17_2_1_1404359910506_20649'), 'http://www.jornalismoemfluxo.com/tudo?format=json&callback=wr.parse')
+
